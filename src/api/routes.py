@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User
+from api.models import db, Character, Sigils, Weapon, User
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -18,7 +18,7 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-@api.route('/characters', methods=['GET'])
+@api.route('/character', methods=['GET'])
 def get_characters():
 
     character = Character.query.all()
@@ -48,14 +48,14 @@ def create_sigils():
     db.session.commit()
     return f"the new sigils {request_body['sigil_name']} was created successfully", 200
 
-@api.route('/weapons', methods=['GET'])
+@api.route('/weapon', methods=['GET'])
 def get_weapons():
 
     weapons = Weapons.query.all()
     weapons_list = list(map(lambda x: x.serialize(), weapons))
     return jsonify(weapons_list), 200
 
-@api.route('/weapons', methods=['POST'])
+@api.route('/weapon', methods=['POST'])
 def create_weapons():
     request_body = request.get_json()
     new_weapons = Weapons(weapon_name=request_body['weapon_name'], weapon_image=request_body['weapon_image'], weapon_description=request_body['weapon_description'], abilities=request_body['abilities'])
