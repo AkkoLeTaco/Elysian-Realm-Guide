@@ -51,14 +51,14 @@ def create_sigils():
 @api.route('/weapon', methods=['GET'])
 def get_weapons():
 
-    weapons = Weapons.query.all()
+    weapons = Weapon.query.all()
     weapons_list = list(map(lambda x: x.serialize(), weapons))
     return jsonify(weapons_list), 200
 
 @api.route('/weapon', methods=['POST'])
 def create_weapons():
     request_body = request.get_json()
-    new_weapons = Weapons(weapon_name=request_body['weapon_name'], weapon_image=request_body['weapon_image'], weapon_description=request_body['weapon_description'], abilities=request_body['abilities'])
+    new_weapons = Weapon(weapon_name=request_body['weapon_name'], weapon_image=request_body['weapon_image'], weapon_description=request_body['weapon_description'], abilities=request_body['abilities'])
     db.session.add(new_weapons)
     db.session.commit()
     return f"the new weapons {request_body['weapon_name']} was created successfully", 200
