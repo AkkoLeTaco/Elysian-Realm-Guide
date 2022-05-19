@@ -23,14 +23,14 @@ export const Home = () => {
           </p>
         </div>
       </div>
-      <div class="card d-flex justify-content-center">
+      <div class="card d-flex justify-content-center bg-dark">
         <div class="card-body border border-success h-50 d-inline-block">
-          <blockquote class="blockquote mb-0 text-center">
+          <blockquote class="blockquote mb-0 text-light text-center">
             <p>
-              "Knowing the ugliness of evolution I also can say that I know the
-              beauty of life"
+              "Knowing the ugliness of evolution, I also can say that I know the
+              beauty of life."
             </p>
-            <footer class="blockquote-footer">
+            <footer class="blockquote-footer text-success">
               Mobius,{" "}
               <cite title="Source Title text-center">Honkai Impact 3rd</cite>
             </footer>
