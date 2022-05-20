@@ -43,10 +43,10 @@ def get_signets():
 @api.route('/signets', methods=['POST'])
 def create_signets():
     request_body = request.get_json()
-    new_signets = Signets(sigil_name=request_body['sigil_name'], sigil_image=request_body['sigil_image'], sigil_description=request_body['sigil_description'], best_used=request_body['best_used'])
+    new_signets = Signets(signet_name=request_body['signet_name'], signet_image=request_body['signet_image'], signet_description=request_body['signet_description'], best_used=request_body['best_used'])
     db.session.add(new_signets)
     db.session.commit()
-    return f"the new signets {request_body['sigil_name']} was created successfully", 200
+    return f"the new signets {request_body['signet_name']} was created successfully", 200
 
 @api.route('/weapon', methods=['GET'])
 def get_weapons():

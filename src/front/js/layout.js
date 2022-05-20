@@ -8,7 +8,6 @@ import { Info } from "./pages/info.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
-import { Footer } from "./component/footer.jsx";
 import { Boss } from "./pages/boss.jsx";
 
 //create your first component
@@ -41,7 +40,6 @@ const Layout = () => {
               <h1>Not found!</h1>
             </Route>
           </Switch>
-          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     </div>

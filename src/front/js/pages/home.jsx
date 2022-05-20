@@ -7,7 +7,6 @@ import "../../styles/home.css";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  console.log(store);
   return (
     <>
       <div className="jumbotron jumbotron-fluid">
@@ -35,23 +34,6 @@ export const Home = () => {
             </footer>
           </blockquote>
         </div>
-      </div>
-      <div className="list-group">
-        {store.list &&
-          store.list.map((item, index) => {
-            return (
-              <div key={index}>
-                <div>{item.name}</div>
-                <div>
-                  <img
-                    src="https://i.ibb.co/1KwRggx/falu-red-color-solid-background-1920x1080.png"
-                    alt="falu-red-color-solid-background-1920x1080"
-                    border="0"
-                  />
-                </div>
-              </div>
-            );
-          })}
       </div>
     </>
   );
