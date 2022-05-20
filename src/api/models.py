@@ -23,7 +23,7 @@ class Character(db.Model):
     name = db.Column(db.String(120), unique=False, nullable=False)
     image = db.Column(db.String(300), unique=False, nullable=False)
     description = db.Column(db.String(80), unique=False, nullable=False)
-    best_sigils = db.Column(db.String(80), unique=False, nullable=False)
+    best_signets = db.Column(db.String(80), unique=False, nullable=False)
     best_weapon = db.Column(db.String(80), unique=False, nullable=False)
 
     def __repr__(self):
@@ -35,26 +35,26 @@ class Character(db.Model):
             "name": self.name,
             "image": self.image,
             "description": self.description,
-            "best_sigils": self.best_sigils,
+            "best_signets": self.best_signets,
             "best_weapon": self.best_weapon,
         }
 
-class Sigils(db.Model):
+class Signets(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    sigil_name = db.Column(db.String(120), unique=False, nullable=False)
-    sigil_image = db.Column(db.String(120), unique=True, nullable=False)
-    sigil_description = db.Column(db.String(80), unique=False, nullable=False)
+    signet_name = db.Column(db.String(120), unique=False, nullable=False)
+    signet_image = db.Column(db.String(120), unique=True, nullable=False)
+    signet_description = db.Column(db.String(80), unique=False, nullable=False)
     best_used = db.Column(db.String(80), unique=False, nullable=False)
     
     def __repr__(self):
-        return '<Sigils %r>' % self.id
+        return '<Signets %r>' % self.id
 
     def serialize(self):
         return {
             "id": self.id,
-            "sigil_name": self.sigil_name,
-            "sigil_image": self.sigil_image,
-            "sigil_description": self.sigil_description,
+            "signet_name": self.signet_name,
+            "signet_image": self.signet_image,
+            "signet_description": self.signet_description,
             "best_used": self.best_used,
         }
 
