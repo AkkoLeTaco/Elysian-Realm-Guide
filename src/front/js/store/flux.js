@@ -22,29 +22,26 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().changeColor(0, "green");
       },
       getData: () => {
-        fetch(
-          "https://3001-akkoletaco-elysianrealm-0wfcaxzjir0.ws-us45.gitpod.io/api/character",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
+        fetch(process.env.BACKEND_URL + "/api/character", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
           .then((response) => response.json())
           .then((result) => setStore({ list: result }))
           .catch((error) => console.log("error", error));
       },
 
-      getMessage: () => {
-        // fetching data from the backend
-        fetch(process.env.BACKEND_URL + "/api/hello")
-          .then((resp) => resp.json())
-          .then((data) => setStore({ message: data.message }))
-          .catch((error) =>
-            console.log("Error loading message from backend", error)
-          );
-      },
+      // getMessage: () => {
+      //   // fetching data from the backend
+      //   fetch(process.env.BACKEND_URL + "/api/hello")
+      //     .then((resp) => resp.json())
+      //     .then((data) => setStore({ message: data.message }))
+      //     .catch((error) =>
+      //       console.log("Error loading message from backend", error)
+      //     );
+      // },
       changeColor: (index, color) => {
         //get the store
         const store = getStore();
