@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home.jsx";
 import { Cards } from "./pages/cards.jsx";
 import { Info } from "./pages/info.jsx";
+import { Details } from "./pages/details.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
@@ -29,7 +30,7 @@ const Layout = () => {
               <Cards />
             </Route>
             <Route exact path="/characters/:theid">
-              <Character />
+              <Details />
             </Route>
             <Route exact path="/info">
               <Info />
