@@ -24,11 +24,13 @@ export const Home = () => {
           </p>
         </div>
       </div>
-      <div className="card d-flex justify-content-center bg-dark">
+      <div className="border-color card d-flex justify-content-center bg-dark">
         <div className="card-body border h-50 d-inline-block">
           <blockquote className="blockquote mb-0 text-light text-center">
-            <p>"Knowledge without wisdom is no different than a curse."</p>
-            <footer className="blockquote-footer">
+            <p className="change-color">
+              "Knowledge without wisdom is no different than a curse."
+            </p>
+            <footer className="quote-color blockquote-footer">
               Elysia,{" "}
               <cite title="Source Title text-center">Honkai Impact 3rd</cite>
             </footer>
