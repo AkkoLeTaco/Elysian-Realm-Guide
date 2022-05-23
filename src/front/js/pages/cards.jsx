@@ -17,13 +17,12 @@ export const Cards = () => {
               <div className="card" style={{ width: "18rem" }}>
                 <img
                   className="card-img-top"
-                  src={store.img + ele.uid + ".jpg"}
+                  src={store.img + ele.uid + ".png"}
                   alt="Card image cap"
                 />
                 <div className="card-body">
                   <h5 className="card-title">{ele.name}</h5>
-                  <p className="card-text">Gender: {ele.gender}</p>
-                  <Link to={"/details/" + ele.uid}>
+                  <Link to={"characters/" + ele.uid}>
                     <button
                       className="btn btn-primary px-2.5"
                       onClick={() => {
@@ -33,15 +32,6 @@ export const Cards = () => {
                       Learn more
                     </button>
                   </Link>
-                  <button
-                    onClick={() => {
-                      duplicate(ele);
-                    }}
-                    type="button"
-                    className="btn btn-outline-warning mx-5"
-                  >
-                    <i className="fa fa-heart" aria-hidden="true"></i>
-                  </button>
                 </div>
               </div>
             </div>

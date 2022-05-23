@@ -28,6 +28,9 @@ const Layout = () => {
             <Route exact path="/characters">
               <Cards />
             </Route>
+            <Route exact path="/characters/:theid">
+              <Character />
+            </Route>
             <Route exact path="/info">
               <Info />
             </Route>
