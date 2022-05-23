@@ -3,18 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       list: [],
       message: null,
-      demo: [
-        {
-          title: "FIRST",
-          background: "white",
-          initial: "white",
-        },
-        {
-          title: "SECOND",
-          background: "white",
-          initial: "white",
-        },
-      ],
+      CharacterCards: [],
+      CharacterDescription: {},
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -32,16 +22,16 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((result) => setStore({ list: result }))
           .catch((error) => console.log("error", error));
       },
+      loadDetails: (num) => {
+        fetch(process.env.BACKEND_URL + `/api/character/${num}`, {
+          method: "GET",
+          redirect: "follow",
+        })
+          .then((response) => response.json())
+          .then((result) => setStore({ CharacterDescription: result }))
+          .catch((error) => console.log("error", error));
+      },
 
-      // getMessage: () => {
-      //   // fetching data from the backend
-      //   fetch(process.env.BACKEND_URL + "/api/hello")
-      //     .then((resp) => resp.json())
-      //     .then((data) => setStore({ message: data.message }))
-      //     .catch((error) =>
-      //       console.log("Error loading message from backend", error)
-      //     );
-      // },
       changeColor: (index, color) => {
         //get the store
         const store = getStore();

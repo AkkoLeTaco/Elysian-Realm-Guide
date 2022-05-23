@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/home.css";
 import ElysiaSignet from "../../img/Elysia_Signet.png";
 
 export const Navbar = () => {
@@ -13,7 +14,7 @@ export const Navbar = () => {
           height="24"
           className="d-inline-block align-text-top"
         />{" "}
-        Elysian Realm Guide
+        <span className="title-color">Elysian Realm Guide</span>
       </a>
       <button
         className="navbar-toggler"
