@@ -28,10 +28,18 @@ def get_characters():
 @api.route('/character', methods=['POST'])
 def create_character():
     request_body = request.get_json()
-    new_character = Character(name=request_body['name'], image=request_body['image'], description=request_body['description'], best_signets=request_body['best_signets'], best_weapon=request_body['best_weapon'])
-    db.session.add(new_character)
-    db.session.commit()
-    return f"the new character {request_body['name']} was created successfully", 200
+    if type(request_body) == dict:
+        new_character = Character(name=request_body['name'], image=request_body['image'], description=request_body['description'], best_signets=request_body['best_signets'], best_weapon=request_body['best_weapon'])
+        db.session.add(new_character)
+        db.session.commit()
+        return f"the new character {request_body['name']} was created successfully", 200
+    elif type(request_body) == list:
+        for item in request_body:
+            new_character = Character(name=item['name'], image=item['image'], description=item['description'], best_signets=item['best_signets'], best_weapon=item['best_weapon'])
+            db.session.add(new_character)
+            db.session.commit()
+        return f"the new characters was created successfully", 200
+
 
 @api.route('/signets', methods=['GET'])
 def get_signets():
