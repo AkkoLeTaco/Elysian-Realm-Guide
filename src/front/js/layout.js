@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+import { Signup } from "./pages/signup.jsx";
+import { Login } from "./pages/login.jsx";
 import { Home } from "./pages/home.jsx";
 import { Cards } from "./pages/cards.jsx";
 import { Info } from "./pages/info.jsx";
@@ -25,6 +27,12 @@ const Layout = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+            <Route exact path="/login">
+              <Login />
             </Route>
             <Route exact path="/characters">
               <Cards />
