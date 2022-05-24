@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import ElysiaImageUrl from "../../img/RaidenElysia.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Login } from "./login.jsx";
 import Cards from "./cards.jsx";
 import "../../styles/home.css";
 

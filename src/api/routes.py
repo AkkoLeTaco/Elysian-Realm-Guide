@@ -111,10 +111,17 @@ def get_signets():
 @api.route('/signets', methods=['POST'])
 def create_signets():
     request_body = request.get_json()
-    new_signets = Signets(signet_name=request_body['signet_name'], signet_image=request_body['signet_image'], signet_description=request_body['signet_description'], best_used=request_body['best_used'])
-    db.session.add(new_signets)
-    db.session.commit()
-    return f"the new signets {request_body['signet_name']} was created successfully", 200
+    if type(request_body) == dict:
+        new_signets = Signets(signet_name=request_body['signet_name'], signet_image=request_body['signet_image'], signet_description=request_body['signet_description'], best_used=request_body['best_used'])
+        db.session.add(new_signets)
+        db.session.commit()
+        return f"the new signets {request_body['signet_name']} was created successfully", 200
+    elif type(request_body) == list:
+        for item in request_body:
+            new_signets = Signets(signet_name=item['signet_name'], signet_image=item['signet_image'], signet_description=item['signet_description'], best_used=item['best_used'])
+            db.session.add(new_signets)
+            db.session.commit()
+        return f"the list of signets was created successfully", 200  
 
 @api.route('/weapon', methods=['GET'])
 def get_weapons():
@@ -126,7 +133,14 @@ def get_weapons():
 @api.route('/weapon', methods=['POST'])
 def create_weapons():
     request_body = request.get_json()
-    new_weapons = Weapon(weapon_name=request_body['weapon_name'], weapon_image=request_body['weapon_image'], weapon_description=request_body['weapon_description'], abilities=request_body['abilities'])
-    db.session.add(new_weapons)
-    db.session.commit()
-    return f"the new weapons {request_body['weapon_name']} was created successfully", 200
+    if type(request_body) == dict:
+        new_weapons = Weapon(weapon_name=request_body['weapon_name'], weapon_image=request_body['weapon_image'], weapon_description=request_body['weapon_description'], abilities=request_body['abilities'])
+        db.session.add(new_weapons)
+        db.session.commit()
+        return f"the new weapons {request_body['weapon_name']} was created successfully", 200
+    elif type(request_body) == list:
+        for item in request_body:
+            new_weapons = Weapon(weapon_name=item['weapon_name'], weapon_image=item['weapon_image'], weapon_description=item['weapon_description'], abilities=item['abilities'])
+            db.session.add(new_weapons)
+            db.session.commit()
+        return f"the list of weapons was created successfully", 200

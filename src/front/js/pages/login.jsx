@@ -1,6 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import { useHistory } from "react-router-dom";
+import ElysiaSignet from "../../img/Elysia_Signet.png";
+import ElysiaShow from "../../img/ElyShow.jpg";
+import "../../styles/home.css";
 
 export const Login = () => {
   const { actions } = useContext(Context);
@@ -9,9 +12,19 @@ export const Login = () => {
   const [errors, setErrors] = useState("");
   const history = useHistory();
   return (
-    <div className="Signin-form">
-      <div className="Log-Img"></div>
-      <div className="Signin">
+    <div className="Signin-form bg-dark">
+      <div className="Log-Img">
+        <img
+          className="card-img-top Log-Img"
+          src={ElysiaShow}
+          alt="Card image cap"
+        />
+      </div>
+      <div className="Signin mx-auto">
+        <span ClassName="SignTitle">
+          <h1>Welcome back, Captain!</h1>
+          <h3 className="subtext text-center">Sign in here!</h3>
+        </span>
         <form>
           {errors}
           <div className="form-group">
@@ -23,7 +36,7 @@ export const Login = () => {
               aria-describedby="emailHelp"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <small id="emailHelp" className="form-text text-muted">
+            <small id="emailHelp" className="form-text">
               We'll never share your email with anyone else.
             </small>
           </div>
@@ -53,6 +66,13 @@ export const Login = () => {
             Submit
           </button>
         </form>
+        <img
+          src={ElysiaSignet}
+          alt=""
+          width="330"
+          height="324"
+          className="imageE"
+        />
       </div>
     </div>
   );
