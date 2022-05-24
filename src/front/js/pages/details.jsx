@@ -6,5 +6,15 @@ export const Details = () => {
   const { store, actions } = useContext(Context);
   console.log(store);
 
-  return 2;
+  return (
+    <>
+      {store.user ? (
+        <>
+          <div></div>
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 };

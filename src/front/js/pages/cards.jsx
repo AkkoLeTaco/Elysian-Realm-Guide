@@ -1,6 +1,4 @@
-import { element } from "prop-types";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
 export const Cards = () => {

@@ -36,9 +36,6 @@ export const Login = () => {
               aria-describedby="emailHelp"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <small id="emailHelp" className="form-text">
-              We'll never share your email with anyone else.
-            </small>
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputPassword1">Password</label>
@@ -65,14 +62,14 @@ export const Login = () => {
           >
             Submit
           </button>
+          <img
+            src={ElysiaSignet}
+            alt=""
+            width="330"
+            height="324"
+            className="imageE"
+          />
         </form>
-        <img
-          src={ElysiaSignet}
-          alt=""
-          width="330"
-          height="324"
-          className="imageE"
-        />
       </div>
     </div>
   );

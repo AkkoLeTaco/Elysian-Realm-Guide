@@ -1,10 +1,19 @@
-import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Login } from "./login.jsx";
 
 export const Boss = (props) => {
   const { store, actions } = useContext(Context);
 
-  return 2;
+  return (
+    <>
+      {store.user ? (
+        <>
+          <div></div>
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 };
