@@ -50,7 +50,6 @@ export const Navbar = () => {
                   onClick={() => {
                     actions.logout();
                   }}
-                  href="/login"
                 >
                   Logout
                 </a>
