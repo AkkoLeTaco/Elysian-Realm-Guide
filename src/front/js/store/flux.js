@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       message: null,
       index: null,
-      user: null,
+      user: [],
       list: [],
       message: null,
       CharacterCards: [],

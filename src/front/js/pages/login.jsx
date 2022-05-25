@@ -21,7 +21,7 @@ export const Login = () => {
         />
       </div>
       <div className="Signin mx-auto">
-        <span ClassName="SignTitle">
+        <span className="SignTitle">
           <h1>Welcome back, Captain!</h1>
           <h3 className="subtext text-center">Sign in here!</h3>
         </span>
@@ -56,7 +56,7 @@ export const Login = () => {
               } else {
                 e.preventDefault();
                 actions.logId(email, password);
-                history.push("/home");
+                history.push("/");
               }
             }}
           >

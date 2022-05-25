@@ -24,7 +24,7 @@ export const Signup = () => {
         />
       </div>
       <div className="Signin mx-auto">
-        <span ClassName="SignTitle">
+        <span className="SignTitle">
           <h1>Want to know more?</h1>
           <h3 className="subtext text-center">Sign up today!</h3>
         </span>
