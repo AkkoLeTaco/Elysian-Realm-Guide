@@ -9,18 +9,20 @@ export const Info = (props) => {
     <>
       {store.user ? (
         <>
-          <div className="card mb-3">
-            <img
-              src="https://i.ibb.co/Y0PR9py/0473aff9e8a10ed9f3e01159a538e9ee-2171723955283249678.png"
-              alt="0473aff9e8a10ed9f3e01159a538e9ee-2171723955283249678"
-              border="0"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Welcome Captain,</h5>
-              <p className="card-text">
-                To the Elysian Realm Guide! Here, we will instruct you on the
-                best characters, signets, and weapons that will aid you in your
-                success!
+          <div className="jumbotron jumbotron-fluid">
+            <div className="carousel-inner">
+              <img
+                src="https://i.ibb.co/FhCCvFL/tumblr-3d1ccf3836410d8c14452691a5485a10-6d0d8cbe-540.jpg"
+                alt="tumblr-3d1ccf3836410d8c14452691a5485a10-6d0d8cbe-540"
+                border="0"
+              />
+              <h1 className="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                Welcome Captian!
+              </h1>
+              <p className="lead carousel-caption d-flex h-75 align-items-center justify-content-center">
+                To the Elysian Realm Guide. Here, you will about the best
+                weapons, characters, and signets that will help you on your
+                quest!
               </p>
             </div>
           </div>
