@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       message: null,
       index: null,
-      user: [],
+      user: false,
       list: [],
       message: null,
       CharacterCards: [],
@@ -76,12 +76,12 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         })
           .then((response) => response.json())
-          .then((result) => setStore({ user: result }))
+          .then((result) => setStore({ user: true }))
           .catch((error) => console.log("error", error));
       },
 
       logout: () => {
-        setStore({ user: null });
+        setStore({ user: false });
       },
       exampleFunction: () => {
         getActions().changeColor(0, "green");
