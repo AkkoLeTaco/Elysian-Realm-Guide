@@ -12,7 +12,7 @@ export const Cards = () => {
             <div className="card" style={{ width: "18rem" }}>
               <img src={ele.image} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">{ele.name}</h5>
+                <h2 class="fw-normal">{ele.name}</h2>
                 <p className="card-text">{ele.description}</p>
               </div>
             </div>
