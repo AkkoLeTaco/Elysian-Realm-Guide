@@ -1,3 +1,4 @@
+import { element } from "prop-types";
 import React, { useContext } from "react";
 import "../../styles/details.css";
 import { Context } from "../store/appContext";
@@ -8,23 +9,20 @@ export const Details = () => {
 
   return (
     <>
-      {store.user ? (
+      {store.list.result ? (
         <>
-          <hr class="featurette-divider" />
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading fw-normal lh-1">
-                First featurette heading.
-                <span class="text-muted">It’ll blow your mind.</span>
+          <hr className="featurette-divider" />
+          <div className="row featurette">
+            <div className="col-md-7">
+              <h2 className="featurette-heading fw-normal lh-1">
+                {ele.name}
+                <span className="text-muted">{list.description}</span>
               </h2>
-              <p class="lead">
-                Some great placeholder content for the first featurette here.
-                Imagine some exciting prose here.
-              </p>
+              <p className="lead">{ele.description}</p>
             </div>
-            <div class="col-md-5">
+            <div className="col-md-5">
               <svg
-                class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,22 +39,18 @@ export const Details = () => {
               </svg>
             </div>
           </div>
-          <hr class="featurette-divider" />
-          <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">
-                Oh yeah, it’s that good.
-                <span class="text-muted">See for yourself.</span>
+          <hr className="featurette-divider" />
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2">
+              <h2 className="featurette-heading fw-normal lh-1">
+                {ele.weapon_name}
+                <span className="text-muted">See for yourself.</span>
               </h2>
-              <p class="lead">
-                Another featurette? Of course. More placeholder content here to
-                give you an idea of how this layout would work with some actual
-                real-world content in place.
-              </p>
+              <p className="lead">{ele.abilities}</p>
             </div>
-            <div class="col-md-5 order-md-1">
+            <div className="col-md-5 order-md-1">
               <svg
-                class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,22 +67,20 @@ export const Details = () => {
               </svg>
             </div>
           </div>
-          <hr class="featurette-divider" />
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading fw-normal lh-1">
-                And lastly, this one.<span class="text-muted">Checkmate.</span>
+          <hr className="featurette-divider" />
+          <div className="row featurette">
+            <div className="col-md-7">
+              <h2 className="featurette-heading fw-normal lh-1">
+                {ele.signet_name}
+                <span className="text-muted">Checkmate.</span>
               </h2>
-              <p class="lead">
-                And yes, this is the last block of representative placeholder
-                content. Again, not really intended to be actually read, simply
-                here to give you a better view of what this would look like with
-                some actual content. Your content.
+              <p className="lead">
+                {ele.best_used}, {ele.signet_description},
               </p>
             </div>
-            <div class="col-md-5">
+            <div className="col-md-5">
               <svg
-                class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,10 +97,10 @@ export const Details = () => {
               </svg>
             </div>
           </div>
-          <hr class="featurette-divider" />
+          <hr className="featurette-divider" />
         </>
       ) : (
-        <Login />
+        <h1 className="waitscreen text-center">Loading</h1>
       )}
     </>
   );

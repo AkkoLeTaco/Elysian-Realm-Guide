@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       list: [],
       message: null,
       CharacterCards: [],
-      CharacterDescription: {},
+      CharacterDescription: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
