@@ -9,11 +9,7 @@ export const Info = () => {
     <>
       {store.user ? (
         <>
-<<<<<<< HEAD
-          <div className="card mb-3" style="max-width: 540px;">
-=======
           <div className="card mb-3" style={{ height: "18rem" }}>
->>>>>>> 856617aa6a650af5660d2a231189465abb952666
             <div className="row g-0">
               <div className="col-md-4">
                 <img
@@ -24,18 +20,6 @@ export const Info = () => {
               </div>
               <div className="col-md-8">
                 <div className="card-body">
-<<<<<<< HEAD
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p className="card-text">
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-=======
                   <h5 className="card-title align-item right justify-content-right">
                     Welcome Captain!
                   </h5>
@@ -46,7 +30,6 @@ export const Info = () => {
                     will face, and to be prepared you research. In this guide,
                     you will read about three Valkyries, multiples and their
                     abilities, and a handful of signets and their properties.
->>>>>>> 856617aa6a650af5660d2a231189465abb952666
                   </p>
                 </div>
               </div>

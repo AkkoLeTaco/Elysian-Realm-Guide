@@ -1,3 +1,4 @@
+import { element } from "prop-types";
 import React, { useContext } from "react";
 import "../../styles/details.css";
 import { Context } from "../store/appContext";
@@ -8,14 +9,14 @@ export const Details = () => {
 
   return (
     <>
-      {store.user ? (
+      {store.list.result ? (
         <>
           <hr className="featurette-divider" />
           <div className="row featurette">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
                 First featurette heading.
-                <span className="text-muted">It’ll blow your mind.</span>
+                <span className="text-muted">{list.description}</span>
               </h2>
               <p className="lead">
                 Some great placeholder content for the first featurette here.
@@ -109,7 +110,7 @@ export const Details = () => {
           <hr className="featurette-divider" />
         </>
       ) : (
-        <Login />
+        <h1 className="waitscreen text-center">Loading</h1>
       )}
     </>
   );
