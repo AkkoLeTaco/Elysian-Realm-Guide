@@ -14,7 +14,7 @@ export const Info = () => {
               <div className="col-md-4">
                 <img
                   src="https://i.ibb.co/FhCCvFL/tumblr-3d1ccf3836410d8c14452691a5485a10-6d0d8cbe-540.jpg"
-                  alt="Card image cap"
+                  alt="tumblr-3d1ccf3836410d8c14452691a5485a10-6d0d8cbe-540"
                   border="0"
                 />
               </div>
