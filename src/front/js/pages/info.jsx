@@ -18,17 +18,20 @@ export const Info = () => {
               />
             </div>
             <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="carousel-caption d-flex h-75 align-item left justify-content-left">
-                  Welcome Captain!
-                </h5>
+              <div className="card-body text-left">
+                <span>
+                  <h5 className="carousel-caption d-flex h-75 align-item-left justify-content-left">
+                    Welcome Captain!
+                  </h5>
+                </span>
                 <p className="lead carousel-caption d-flex h-50 align-items-left justify-content-left">
                   This is the Elysian Realm Guide! Here, you will learn about
                   the best characters, weapons, and signets that will aid you in
-                  your success! There are many layers and difficulties ones will
-                  face, and to be prepared you research. In this guide, you will
-                  read about three Valkyries, multiples and their abilities, and
-                  a handful of signets and their properties.
+                  your success! There are many layers and difficulties one will
+                  face, and to be prepared, you need to research. In this guide,
+                  you will read about three Valkyries, multiples weapons and
+                  their abilities, and a handful of signets and their
+                  properties.
                 </p>
               </div>
             </div>
