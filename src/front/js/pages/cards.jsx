@@ -22,7 +22,11 @@ export const Cards = () => {
         {store.list &&
           store.list.map((ele, index) => {
             return (
-              <div className="card bg-dark" style={{ width: "18rem" }}>
+              <div
+                key={index}
+                className="card bg-dark"
+                style={{ width: "18rem" }}
+              >
                 <Link to="/characters/:theid">
                   <img src={ele.image} className="card-img-top" alt="..." />
                 </Link>
