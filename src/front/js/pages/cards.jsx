@@ -10,7 +10,11 @@ export const Cards = () => {
   return (
     <>
       <div className="jumbotron jumbotron-fluid bg-dark m-0">
-        <img src="..." className="card-img-top" alt="..." />
+        <img
+          src="https://i.ibb.co/TBGgjcr/elysia-realm-wallpaper-by-ziyee2007-derwira.png"
+          className="card-img-top"
+          alt="..."
+        />
         <div className="container text-light">
           <h1 className="change-color display-4">Characters</h1>
           <p className="change-color lead m-0">
