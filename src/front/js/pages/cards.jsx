@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import "../../styles/cards.css";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const Cards = () => {
   const { store, actions } = useContext(Context);
+  let history = useHistory();
   console.log(store);
   return (
     <>
@@ -27,9 +28,15 @@ export const Cards = () => {
                 className="card bg-dark"
                 style={{ width: "18rem" }}
               >
-                <Link to="/characters/:theid">
+                <span
+                  type="button"
+                  onClick={() => {
+                    actions.loadDetails(ele.id);
+                    history.push("/characters/" + ele.id);
+                  }}
+                >
                   <img src={ele.image} className="card-img-top" alt="..." />
-                </Link>
+                </span>
                 <div className="card-body">
                   <h2 className="name fw-normal">{ele.name}</h2>
                 </div>

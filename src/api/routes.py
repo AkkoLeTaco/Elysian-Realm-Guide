@@ -70,6 +70,11 @@ def protected():
     user = User.query.filter_by(email=current_user).first()
     return jsonify({"first_name": user.first_name, "email":user.email, "auth": True}), 200
 
+@api.route('/character/<int:character_id>', methods=['GET'])
+def handle_character(character_id):
+    character = Character.query.get(character_id)
+    return (character.serialize())
+
 @api.route('/character', methods=['GET'])
 def get_characters():
 
