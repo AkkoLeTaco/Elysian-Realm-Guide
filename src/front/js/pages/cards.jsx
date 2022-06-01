@@ -15,7 +15,7 @@ export const Cards = () => {
           className="card-img-top"
           alt="..."
         />
-        <div className="container text-light">
+        <div className="no container text-light">
           <h1 className="change-color display-4">Characters</h1>
           <p className="change-color lead m-0">
             This is where the journey begins. choose a Character you wish to

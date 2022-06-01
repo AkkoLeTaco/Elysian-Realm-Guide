@@ -8,6 +8,7 @@ import { Home } from "./pages/home.jsx";
 import { Cards } from "./pages/cards.jsx";
 import { Info } from "./pages/info.jsx";
 import { Details } from "./pages/details.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
@@ -46,9 +47,7 @@ const Layout = () => {
             <Route exact path="/bosses">
               <Boss />
             </Route>
-            <Route>
-              <h1>Not found!</h1>
-            </Route>
+            <Route path="*" component={NotFound} element={<NotFound />} />
           </Switch>
         </ScrollToTop>
       </BrowserRouter>

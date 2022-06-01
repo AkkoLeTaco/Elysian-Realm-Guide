@@ -1,0 +1,13 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 448px;
+  height: auto;
+}
+.error {
+  background-color: rgb(51, 59, 69);
+}
+.texti {
+  padding-bottom: 155px;
+}

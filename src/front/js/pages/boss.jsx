@@ -16,7 +16,7 @@ export const Boss = (props) => {
               className="card-img-top"
               alt="..."
             />
-            <div className="container text-light">
+            <div className="no container text-light">
               <h1 className="change-color display-4">Bosses</h1>
               <p className="change-color lead m-0">
                 You will encounter them in your journey eventually, let's get to
@@ -46,7 +46,7 @@ export const Boss = (props) => {
               </div>
             </div>
           </div>
-          <div className="card mb-3 bg-dark">
+          <div className="yes card mb-3 bg-dark">
             <div className="row g-0">
               <div className="col-md-4">
                 <img
@@ -69,7 +69,7 @@ export const Boss = (props) => {
               </div>
             </div>
           </div>
-          <div className="card mb-3 bg-dark">
+          <div className="yes card mb-3 bg-dark">
             <div className="row g-0">
               <div className="col-md-4">
                 <img
@@ -91,7 +91,7 @@ export const Boss = (props) => {
               </div>
             </div>
           </div>
-          <div className="card mb-3">
+          <div className="yes card mb-3 bg-dark">
             <div className="row g-0">
               <div className="col-md-4">
                 <img
@@ -101,7 +101,7 @@ export const Boss = (props) => {
                 />
               </div>
               <div className="col-md-8">
-                <div className="card-body">
+                <div className="card-body change-color">
                   <h5 className="card-title">Elysia</h5>
                   <p className="card-text">
                     Elysia is the co-leader of The Thirteen Flame-Chasers. She
