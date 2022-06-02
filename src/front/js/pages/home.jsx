@@ -34,7 +34,7 @@ export const Home = () => {
                   "Knowledge without wisdom is no different than a curse."
                 </p>
                 <footer className="quote-color blockquote-footer">
-                  Elysia,{" "}
+                  Elysia,&nbsp;
                   <cite title="Source Title text-center">
                     Honkai Impact 3rd
                   </cite>

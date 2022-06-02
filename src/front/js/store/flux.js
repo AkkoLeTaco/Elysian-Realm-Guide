@@ -6,8 +6,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       user: false,
       list: [],
       message: null,
-      CharacterCards: [],
-      CharacterDescription: [],
+      characterCards: [],
+      characterDescription: {},
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -31,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         })
           .then((response) => response.json())
-          .then((result) => setStore({ CharacterDescription: result }))
+          .then((result) => setStore({ characterDescription: result }))
           .catch((error) => console.log("error", error));
       },
       create: (email, password, firstname, lastname, dob) => {
