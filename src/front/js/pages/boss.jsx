@@ -34,14 +34,14 @@ export const Boss = (props) => {
                 />
               </div>
               <div className="col-md-8">
-                <div className="card-body text-success">
-                  <h5 className="card-title">Mobius</h5>
-                  <p className="card-text">
+                <div className="mobi-color card-body">
+                  <h3 className="display-4">Mobius</h3>
+                  <h5 className="lead m-0">
                     Mobius is a MANTIS and a scientist of the Previous Era,
                     being behind the creation of the stigmata, MANTISes and
                     other projects. Among The Thirteen Flame-Chasers, she is
                     numbered tenth with the codename "Infinity".
-                  </p>
+                  </h5>
                 </div>
               </div>
             </div>
@@ -57,14 +57,14 @@ export const Boss = (props) => {
               </div>
               <div className="col-md-8">
                 <div className="card-body text-light">
-                  <h5 className="card-title">Aponia</h5>
-                  <p className="card-text">
+                  <h3 className="display-4">Aponia</h3>
+                  <h5 className="lead m-0">
                     Aponia is a very soft-spoken woman. She somehow manages to
                     stay that way even when she is upset. Despite her calm
                     demeanor, she is someone who shouldn't be messed with. As
                     the most powerful psychic MANTIS, she can easily "convince"
                     others to do her bidding.
-                  </p>
+                  </h5>
                 </div>
               </div>
             </div>
@@ -80,13 +80,13 @@ export const Boss = (props) => {
               </div>
               <div className="col-md-8">
                 <div className="card-body text-danger">
-                  <h5 className="card-title">Kalpas</h5>
-                  <p className="card-text">
+                  <h3 className="display-4">Kalpas</h3>
+                  <h5 className="lead m-0">
                     Kalpas is a member of The Thirteen Flame-Chasers. He is
                     ranked sixth, with the codename "Decimation". Kalpas is an
                     aggressive and emotionally unstable person. He is always
                     looking to fight, maim, or kill something.
-                  </p>
+                  </h5>
                 </div>
               </div>
             </div>
@@ -102,12 +102,12 @@ export const Boss = (props) => {
               </div>
               <div className="col-md-8">
                 <div className="card-body change-color">
-                  <h5 className="card-title">Elysia</h5>
-                  <p className="card-text">
+                  <h3 className="display-4">Elysia</h3>
+                  <h5 className="lead m-0">
                     Elysia is the co-leader of The Thirteen Flame-Chasers. She
                     is ranked second amongst the thirteen. Her codename is
                     "Ego".
-                  </p>
+                  </h5>
                 </div>
               </div>
             </div>

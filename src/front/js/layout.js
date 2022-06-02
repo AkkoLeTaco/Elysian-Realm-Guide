@@ -47,7 +47,9 @@ const Layout = () => {
             <Route exact path="/bosses">
               <Boss />
             </Route>
-            <Route path="*" component={NotFound} element={<NotFound />} />
+            <Route>
+              <NotFound />
+            </Route>
           </Switch>
         </ScrollToTop>
       </BrowserRouter>

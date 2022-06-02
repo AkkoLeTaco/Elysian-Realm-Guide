@@ -6,4 +6,8 @@
 }
 .no {
   padding-bottom: 22px;
+  padding-left: 1px;
+}
+.mobi-color {
+  color: rgb(12, 210, 12);
 }
