@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import ReactPlayer from "react-player";
 import { Login } from "./login.jsx";
 import "../../styles/info.css";
 
@@ -36,12 +37,17 @@ export const Info = () => {
                 What is the Elysian Realm?
               </h1>
             </div>
+            <ReactPlayer
+              className="vid"
+              controls
+              url="https://www.youtube.com/watch?v=Ofg2_qN3MrQ"
+            />
           </div>
-          <ul class="list-unstyled bg-dark">
-            <li class="media">
-              <img src="..." class="mr-3" alt="..." />
-              <div class="media-body text-light">
-                <h5 class="mt-0 mb-1">List-based media object</h5>
+          <ul className="list-unstyled bg-dark">
+            <li className="media">
+              <img src="..." className="mr-3" alt="..." />
+              <div className="media-body text-light">
+                <h5 className="mt-0 mb-1">Characters</h5>
                 <p>
                   All my girls vintage Chanel baby. So you can have your cake.
                   Tonight, tonight, tonight, I'm walking on air. Slowly
@@ -52,10 +58,10 @@ export const Info = () => {
                 </p>
               </div>
             </li>
-            <li class="media my-4">
-              <img src="..." class="mr-3" alt="..." />
-              <div class="media-body text-light">
-                <h5 class="mt-0 mb-1">List-based media object</h5>
+            <li className="media my-4">
+              <img src="..." className="mr-3" alt="..." />
+              <div className="media-body text-light">
+                <h5 className="mt-0 mb-1">Signets</h5>
                 <p>
                   Maybe a reason why all the doors are closed. Cause once you’re
                   mine, once you’re mine. Be your teenage dream tonight. Heavy
@@ -64,10 +70,10 @@ export const Info = () => {
                 </p>
               </div>
             </li>
-            <li class="media">
-              <img src="..." class="mr-3" alt="..." />
-              <div class="media-body text-light">
-                <h5 class="mt-0 mb-1">List-based media object</h5>
+            <li className="media">
+              <img src="..." className="mr-3" alt="..." />
+              <div className="media-body text-light">
+                <h5 className="mt-0 mb-1">List-based media object</h5>
                 <p>
                   Are you brave enough to let me see your peacock? There’s no
                   going back. This is the last time you say, after the last line
