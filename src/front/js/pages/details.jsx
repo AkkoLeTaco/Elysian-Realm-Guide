@@ -1,3 +1,4 @@
+import { element } from "prop-types";
 import React, { useContext } from "react";
 import "../../styles/details.css";
 import { Context } from "../store/appContext";
@@ -23,7 +24,7 @@ export const Details = () => {
             </div>
             <div className="col-md-5">
               <img
-                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                src={store.characterDescription.image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +32,7 @@ export const Details = () => {
                 aria-label="Placeholder: 500x500"
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" />
-                <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                  {store.characterDescription.image}
-                </text>
-              </img>
+              />
             </div>
           </div>
           <hr className="featurette-divider" />
@@ -48,11 +43,13 @@ export const Details = () => {
                   {store.characterDescription.weapon_name}
                 </span>
               </h2>
-              <p className="lead">{store.characterDescription.abilities}</p>
+              <p className="lead">
+                {store.characterDescription.weapon_description}
+              </p>
             </div>
             <div className="col-md-5 order-md-1">
               <img
-                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                src={store.characterDescription.weapon_image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,21 +57,16 @@ export const Details = () => {
                 aria-label="Placeholder: 500x500"
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" />
-                <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                  500x500
-                </text>
-              </img>
+              />
             </div>
           </div>
           <hr className="featurette-divider" />
           <div className="row featurette">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
-                {store.characterDescription.signet_name}
-                <span className="text-muted">Checkmate.</span>
+                <span className="text-muted">
+                  {store.characterDescription.signet_name}
+                </span>
               </h2>
               <p className="lead">
                 {store.characterDescription.best_used},{" "}
@@ -83,7 +75,7 @@ export const Details = () => {
             </div>
             <div className="col-md-5">
               <img
-                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                src={store.characterDescription.signet_image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,13 +83,7 @@ export const Details = () => {
                 aria-label="Placeholder: 500x500"
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" />
-                <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                  500x500
-                </text>
-              </img>
+              />
             </div>
           </div>
           <hr className="featurette-divider" />
