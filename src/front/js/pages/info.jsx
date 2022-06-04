@@ -34,8 +34,17 @@ export const Info = () => {
           <div className="jumbotron jumbotron-fluid bg-dark m-0">
             <div className="no container text-light">
               <h1 className="change-color display-4">
-                What is the Elysian Realm?
+                Backstory of the Elysian Realm
               </h1>
+              <p className="change-color lead m-0">
+                The memories of the last thirteen Flame-Chasers of the Previous
+                Era rest in this underworld. From a corner of World Serpent's
+                sacrificial ground, a lightless corridor meandered out, reaching
+                into a colossal facility buried in the ground. It was where
+                every agent of World Serpent was baptized to enter a new life.
+                The memories of the last thirteen Flame-Chasers of the Previous
+                Era rest in this underworld.
+              </p>
             </div>
             <ReactPlayer
               className="vid"
@@ -43,45 +52,70 @@ export const Info = () => {
               url="https://www.youtube.com/watch?v=Ofg2_qN3MrQ"
             />
           </div>
-          <ul className="list-unstyled bg-dark">
-            <li className="media">
-              <img src="..." className="mr-3" alt="..." />
-              <div className="media-body text-light">
-                <h5 className="mt-0 mb-1">Characters</h5>
-                <p>
-                  All my girls vintage Chanel baby. So you can have your cake.
-                  Tonight, tonight, tonight, I'm walking on air. Slowly
-                  swallowing down my fear, yeah yeah. Growing fast into a bolt
-                  of lightning. So hot and heavy, 'Til dawn. That fairy tale
-                  ending with a knight in shining armor. Heavy is the head that
-                  wears the crown.
-                </p>
+          <div className="card mb-3 bg-dark">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src="https://i.ibb.co/XCBj3ZY/chara.jpg"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
               </div>
-            </li>
-            <li className="media my-4">
-              <img src="..." className="mr-3" alt="..." />
-              <div className="media-body text-light">
-                <h5 className="mt-0 mb-1">Signets</h5>
-                <p>
-                  Maybe a reason why all the doors are closed. Cause once you’re
-                  mine, once you’re mine. Be your teenage dream tonight. Heavy
-                  is the head that wears the crown. It's not even a holiday,
-                  nothing to celebrate. A perfect storm, perfect storm.
-                </p>
+              <div className="col-md-8">
+                <div className="textColor card-body">
+                  <h3 className="display-4">Characters</h3>
+                  <h5 className="lead m-0">
+                    In the Elysian Realm, Captains can deploy their own
+                    Valkyries and choose different signet buffs to tackle
+                    challenges. Buffs will enhance Valkyries' abilities and even
+                    alter their skill mechanics to freshen up the experience.
+                  </h5>
+                </div>
               </div>
-            </li>
-            <li className="media">
-              <img src="..." className="mr-3" alt="..." />
-              <div className="media-body text-light">
-                <h5 className="mt-0 mb-1">List-based media object</h5>
-                <p>
-                  Are you brave enough to let me see your peacock? There’s no
-                  going back. This is the last time you say, after the last line
-                  you break. At the eh-end of it all.
-                </p>
+            </div>
+          </div>
+          <div className="yes card mb-3 bg-dark">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src="https://i.ibb.co/DLfqBVH/Signet.gif"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
               </div>
-            </li>
-          </ul>
+              <div className="col-md-8">
+                <div className="textColor card-body">
+                  <h3 className="display-4">Signets</h3>
+                  <h5 className="lead m-0">
+                    Signets are blessings given by each of the Thirteen
+                    Flamechasers that will aid you through the Elysian Realm.
+                    each one has it's own buffs and abilities and not all will
+                    be usable on the same character. each one is good for each
+                    character.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="yes card mb-3 bg-dark">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <ReactPlayer
+                  controls
+                  url="https://www.youtube.com/watch?v=Ofg2_qN3MrQ"
+                />
+              </div>
+              <div className="col-md-8">
+                <div className="mov-text textColor card-body">
+                  <h3 className="display-4">Specifics</h3>
+                  <h5 className="lead m-0">
+                    If you are interested in the Specifics of the Elysian Realm,
+                    here is a detailed video on the Elysian Realm
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </>
       ) : (
         <Login />

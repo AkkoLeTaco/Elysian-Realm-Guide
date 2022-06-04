@@ -50,7 +50,7 @@ export const Boss = (props) => {
             <div className="row g-0">
               <div className="col-md-4">
                 <img
-                  src="https://i.ibb.co/nksDvNL/appy.png"
+                  src="https://i.ibb.co/YkxQ8Hb/Aponia.gif"
                   className="img-fluid rounded-start"
                   alt="..."
                 />
