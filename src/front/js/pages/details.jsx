@@ -1,5 +1,5 @@
 import { element } from "prop-types";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/details.css";
 import { Context } from "../store/appContext";
 
@@ -9,22 +9,19 @@ export const Details = () => {
 
   return (
     <>
-      {store.characterDescription.id ? (
+      {store.characterDescription.character ? (
         <>
-          <hr className="featurette-divider" />
-          <div className="row featurette">
+          <div className="row featurette bg-dark">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
-                {store.characterDescription.name}
                 <span className="text-muted">
-                  {store.characterDescription.description}
+                  {store.characterDescription.character.description}
                 </span>
               </h2>
-              <p className="lead">{store.characterDescription.best_weapon}</p>
             </div>
             <div className="col-md-5">
               <img
-                src={store.characterDescription.image}
+                src={store.characterDescription.character.image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,21 +32,21 @@ export const Details = () => {
               />
             </div>
           </div>
-          <hr className="featurette-divider" />
-          <div className="row featurette">
+
+          <div className="row featurette bg-dark">
             <div className="col-md-7 order-md-2">
               <h2 className="featurette-heading fw-normal lh-1">
                 <span className="text-muted">
-                  {store.characterDescription.weapon_name}
+                  {store.characterDescription.character.best_weapon}
                 </span>
               </h2>
               <p className="lead">
-                {store.characterDescription.weapon_description}
+                {store.characterDescription.weapon.weapon_description}
               </p>
             </div>
             <div className="col-md-5 order-md-1">
               <img
-                src={store.characterDescription.weapon_image}
+                src={store.characterDescription.weapon.weapon_image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,22 +57,22 @@ export const Details = () => {
               />
             </div>
           </div>
-          <hr className="featurette-divider" />
-          <div className="row featurette">
+
+          <div className="row featurette bg-dark">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
                 <span className="text-muted">
-                  {store.characterDescription.signet_name}
+                  {store.characterDescription.character.best_signets}
                 </span>
               </h2>
               <p className="lead">
-                {store.characterDescription.best_used},{" "}
-                {store.characterDescription.signet_description},
+                {store.characterDescription.signets.best_used},{" "}
+                {store.characterDescription.signets.signet_description},
               </p>
             </div>
             <div className="col-md-5">
               <img
-                src={store.characterDescription.signet_image}
+                src={store.characterDescription.signet.signet_image}
                 width="500"
                 height="500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +83,6 @@ export const Details = () => {
               />
             </div>
           </div>
-          <hr className="featurette-divider" />
         </>
       ) : (
         <h1 className="waitscreen text-center">Loading</h1>
