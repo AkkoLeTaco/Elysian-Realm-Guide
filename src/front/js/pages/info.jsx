@@ -26,8 +26,9 @@ export const Info = () => {
                 best characters, weapons, and signets that will aid you in your
                 success! There are many layers and difficulties one will face,
                 and to be prepared, you need to research. In this guide, you
-                will read about three Valkyries, multiples weapons and their
-                abilities, and a handful of signets and their properties.
+                will read about various Valkyries, multiples weapons and their
+                abilities, as well as a handful of signets with their
+                properties.
               </p>
             </div>
           </div>
@@ -97,16 +98,16 @@ export const Info = () => {
               </div>
             </div>
           </div>
-          <div className="yes card mb-3 bg-dark">
+          <div className="yes maybe card mb-3 bg-dark">
             <div className="row g-0">
-              <div className="col-md-4">
+              <div className="vidie col-md-4">
                 <ReactPlayer
                   controls
-                  url="https://www.youtube.com/watch?v=Ofg2_qN3MrQ"
+                  url="https://www.youtube.com/watch?v=GX0i9f4YERg"
                 />
               </div>
               <div className="col-md-8">
-                <div className="mov-text textColor card-body">
+                <div className="textColor card-body">
                   <h3 className="display-4">Specifics</h3>
                   <h5 className="lead m-0">
                     If you are interested in the Specifics of the Elysian Realm,

@@ -23,30 +23,34 @@ export const Cards = () => {
           </p>
         </div>
       </div>
-      <div className="card-group m-0 bg-dark">
-        {store.list &&
-          store.list.map((ele, index) => {
-            return (
-              <div
-                key={index}
-                className="card bg-dark"
-                style={{ width: "18rem" }}
-              >
-                <span
-                  type="button"
-                  onClick={() => {
-                    actions.loadDetails(ele.id);
-                    history.push("/characters/" + ele.id);
-                  }}
-                >
-                  <img src={ele.image} className="card-img-top" alt="..." />
-                </span>
-                <div className="card-body">
-                  <h2 className="name fw-normal">{ele.name}</h2>
-                </div>
-              </div>
-            );
-          })}
+      <div className="con container w-100">
+        <div className="wii row-cols-2">
+          <div className="darn row card-group m-0 bg-dark">
+            {store.list &&
+              store.list.map((ele, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="col bg-dark"
+                    style={{ width: "18rem" }}
+                  >
+                    <span
+                      type="button"
+                      onClick={() => {
+                        actions.loadDetails(ele.id);
+                        history.push("/characters/" + ele.id);
+                      }}
+                    >
+                      <img src={ele.image} className="card-img-top" alt="..." />
+                    </span>
+                    <div className="card-body">
+                      <h2 className="name fw-normal">{ele.name}</h2>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
     </>
   );

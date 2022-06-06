@@ -41,7 +41,7 @@ export const Navbar = () => {
               <Link to="/bosses">
                 <li className="nav-item nav-link">Boss Info</li>
               </Link>
-              <li className="nav-item">
+              <li className="outLog nav-item">
                 <a
                   className="nav-link"
                   onClick={() => {
