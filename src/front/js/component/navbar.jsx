@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+    <nav className="navbar navbar-expand-md bg-dark navbar-dark d-flex">
       <Link to="/">
         <span className="navbar-brand">
           <img
@@ -41,7 +41,7 @@ export const Navbar = () => {
               <Link to="/bosses">
                 <li className="nav-item nav-link">Boss Info</li>
               </Link>
-              <li className="outLog nav-item">
+              <li className="nav-item postion-absolute d-flex ">
                 <a
                   className="nav-link"
                   onClick={() => {

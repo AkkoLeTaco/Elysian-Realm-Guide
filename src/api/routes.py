@@ -72,8 +72,16 @@ def protected():
 
 @api.route('/character/<int:character_id>', methods=['GET'])
 def handle_character(character_id):
-    character = Character.query.get(character_id)
-    return (character.serialize())
+    character = Character.query.filter_by(id=character_id).first()
+    char_detail = character.serialize()
+    weapon = Weapon.query.filter_by(weapon_name=char_detail['best_weapon']).first()
+    signet = Signets.query.filter_by(signet_name=char_detail['best_signets']).first()
+    character_detail = {
+        "character": character.serialize(),
+        "signet": signet.serialize(),
+        "weapon": weapon.serialize()
+    }
+    return jsonify(character_detail), 200
 
 @api.route('/character', methods=['GET'])
 def get_characters():
@@ -105,6 +113,14 @@ def get_signets():
     signets_list = list(map(lambda i: i.serialize(), signets))
     return jsonify(signets_list), 200
 
+
+@api.route('/signets/<int:signet_id>', methods=['GET'])
+def get_single_signets(signet_id):
+
+    signet = Signets.query.get(signet_id)
+    return jsonify(signet.serialize()), 200
+
+
 @api.route('/signets', methods=['POST'])
 def create_signets():
     request_body = request.get_json()
@@ -126,6 +142,14 @@ def get_weapons():
     weapons = Weapon.query.all()
     weapons_list = list(map(lambda x: x.serialize(), weapons))
     return jsonify(weapons_list), 200
+
+
+@api.route('/weapon/<int:weapon_id>', methods=['GET'])
+def get_single_weapons(weapon_id):
+
+    weapons = Weapon.query.get(weapon_id)
+    return jsonify(weapons.serialize()), 200
+
 
 @api.route('/weapon', methods=['POST'])
 def create_weapons():
