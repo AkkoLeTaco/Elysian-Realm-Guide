@@ -23,8 +23,8 @@ export const Cards = () => {
           </p>
         </div>
       </div>
-      <div className="con container w-100">
-        <div className="wii row-cols-2">
+      <div className="card-group">
+        <div className="card">
           <div className="darn row card-group m-0 bg-dark">
             {store.list &&
               store.list.map((ele, index) => {
