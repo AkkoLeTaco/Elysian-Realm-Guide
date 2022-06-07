@@ -14,7 +14,7 @@ export const Details = () => {
           <div className="row featurette bg-dark">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
-                <span className="text-muted">
+                <span className="text-white">
                   {store.characterDescription.character.description}
                 </span>
               </h2>
@@ -36,13 +36,13 @@ export const Details = () => {
           <div className="row featurette bg-dark">
             <div className="col-md-7 order-md-2">
               <h2 className="featurette-heading fw-normal lh-1">
-                <span className="text-muted">
+                <span className="text-white">
                   {store.characterDescription.character.best_weapon}
                 </span>
               </h2>
-              <p className="lead">
+              <h2 className="lead text-white">
                 {store.characterDescription.weapon.weapon_description}
-              </p>
+              </h2>
             </div>
             <div className="col-md-5 order-md-1">
               <img
@@ -61,13 +61,13 @@ export const Details = () => {
           <div className="row featurette bg-dark">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
-                <span className="text-muted">
+                <span className="text-white">
                   {store.characterDescription.character.best_signets}
                 </span>
               </h2>
-              <p className="lead">
-                {store.characterDescription.signets.best_used},{" "}
-                {store.characterDescription.signets.signet_description},
+              <p className="lead text-white">
+                {store.characterDescription.signet.best_used},{" "}
+                {store.characterDescription.signet.signet_description},
               </p>
             </div>
             <div className="col-md-5">
