@@ -59,7 +59,7 @@ class Signets(db.Model):
             "id": self.id,
             "signet_name": self.signet_name,
             "signet_image": self.signet_image,
-            "signet_description": self.signet_description,
+            "signet_description": self.signet_description
         }
 
 class Weapon(db.Model):
