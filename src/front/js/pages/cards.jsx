@@ -23,34 +23,33 @@ export const Cards = () => {
           </p>
         </div>
       </div>
-      <div className="card-group">
-        <div className="card">
-          <div className="darn row card-group m-0 bg-dark">
-            {store.list &&
-              store.list.map((ele, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="col bg-dark"
-                    style={{ width: "18rem" }}
+      <div className="row row-cols-3 row-cols-md-3 bg-dark">
+        {store.list &&
+          store.list.map((ele, index) => {
+            return (
+              <div className="col">
+                <div key={index} className="card bg-dark">
+                  <span
+                    type="button"
+                    onClick={() => {
+                      actions.loadDetails(ele.id);
+                      history.push("/characters/" + ele.id);
+                    }}
                   >
-                    <span
-                      type="button"
-                      onClick={() => {
-                        actions.loadDetails(ele.id);
-                        history.push("/characters/" + ele.id);
-                      }}
-                    >
-                      <img src={ele.image} className="card-img-top" alt="..." />
-                    </span>
-                    <div className="card-body">
-                      <h2 className="name fw-normal">{ele.name}</h2>
-                    </div>
+                    <img
+                      src={ele.image}
+                      className="card-img-top"
+                      alt="..."
+                      style={{ width: "30rem", height: "34rem" }}
+                    />
+                  </span>
+                  <div className="card-body">
+                    <h2 className="name fw-normal">{ele.name}</h2>
                   </div>
-                );
-              })}
-          </div>
-        </div>
+                </div>
+              </div>
+            );
+          })}
       </div>
     </>
   );

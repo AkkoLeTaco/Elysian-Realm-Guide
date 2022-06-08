@@ -5,8 +5,7 @@
   margin-top: -16px;
 }
 .no {
-  padding-bottom: 22px;
-  padding-left: 1px;
+  justify-content: center;
 }
 .mobi-color {
   color: rgb(12, 210, 12);

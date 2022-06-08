@@ -48,13 +48,6 @@ export const Boss = (props) => {
           </div>
           <div className="yes card mb-3 bg-dark">
             <div className="row g-0">
-              <div className="col-md-4">
-                <img
-                  src="https://i.ibb.co/YkxQ8Hb/Aponia.gif"
-                  className="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
               <div className="col-md-8">
                 <div className="card-body text-light">
                   <h3 className="display-4">Aponia</h3>
@@ -66,6 +59,13 @@ export const Boss = (props) => {
                     others to do her bidding.
                   </h5>
                 </div>
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="https://i.ibb.co/YkxQ8Hb/Aponia.gif"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
               </div>
             </div>
           </div>
@@ -93,13 +93,6 @@ export const Boss = (props) => {
           </div>
           <div className="yes card mb-3 bg-dark">
             <div className="row g-0">
-              <div className="col-md-4">
-                <img
-                  src="https://staticg.sportskeeda.com/editor/2022/05/16498-16524944730411-1920.jpg"
-                  className="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
               <div className="col-md-8">
                 <div className="card-body change-color">
                   <h3 className="display-4">Elysia</h3>
@@ -109,6 +102,13 @@ export const Boss = (props) => {
                     "Ego".
                   </h5>
                 </div>
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="https://staticg.sportskeeda.com/editor/2022/05/16498-16524944730411-1920.jpg"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
               </div>
             </div>
           </div>
