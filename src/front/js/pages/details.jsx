@@ -66,7 +66,6 @@ export const Details = () => {
                 </span>
               </h2>
               <p className="lead text-white">
-                {store.characterDescription.signet.best_used},{" "}
                 {store.characterDescription.signet.signet_description},
               </p>
             </div>

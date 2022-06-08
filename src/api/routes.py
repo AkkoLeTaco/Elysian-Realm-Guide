@@ -31,14 +31,6 @@ def post_user():
     db.session.commit()
     return f"The new user {request_body['email']} was created sucessfully", 200
 
-# @api.route('/signup', methods=['GET'])
-# def send_user():
-#     create_user = User.query.all()
-#     signup_list = list(map(lambda x: x.serialize(), create_user))
-
-#     return jsonify(signup_list), 200
-
-
 @api.route('/user/<int:user_id>', methods=['GET'])
 def one_user(user_id):
     user1 = User.query.get(user_id)
@@ -125,13 +117,13 @@ def get_single_signets(signet_id):
 def create_signets():
     request_body = request.get_json()
     if type(request_body) == dict:
-        new_signets = Signets(signet_name=request_body['signet_name'], signet_image=request_body['signet_image'], signet_description=request_body['signet_description'], best_used=request_body['best_used'])
+        new_signets = Signets(signet_name=request_body['signet_name'], signet_image=request_body['signet_image'], signet_description=request_body['signet_description'])
         db.session.add(new_signets)
         db.session.commit()
         return f"the new signets {request_body['signet_name']} was created successfully", 200
     elif type(request_body) == list:
         for item in request_body:
-            new_signets = Signets(signet_name=item['signet_name'], signet_image=item['signet_image'], signet_description=item['signet_description'], best_used=item['best_used'])
+            new_signets = Signets(signet_name=item['signet_name'], signet_image=item['signet_image'], signet_description=item['signet_description'])
             db.session.add(new_signets)
             db.session.commit()
         return f"the list of signets was created successfully", 200  

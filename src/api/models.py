@@ -50,7 +50,6 @@ class Signets(db.Model):
     signet_name = db.Column(db.String(800), unique=False, nullable=False)
     signet_image = db.Column(db.String(800), unique=True, nullable=False)
     signet_description = db.Column(db.String(800), unique=False, nullable=False)
-    best_used = db.Column(db.String(800), unique=False, nullable=False)
     
     def __repr__(self):
         return '<Signets %r>' % self.id
@@ -61,7 +60,6 @@ class Signets(db.Model):
             "signet_name": self.signet_name,
             "signet_image": self.signet_image,
             "signet_description": self.signet_description,
-            "best_used": self.best_used,
         }
 
 class Weapon(db.Model):
