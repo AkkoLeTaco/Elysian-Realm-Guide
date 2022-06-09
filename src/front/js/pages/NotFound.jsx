@@ -14,7 +14,7 @@ const NotFound = () => {
           <img src={PageNotFound} className="center" />
           <h5 className="text-light texti" style={{ textAlign: "center" }}>
             The thing you seek is not here...<br></br>
-            This is also known as a "404".<br></br>
+            This is also known as a "500".<br></br>
             <Link to="/">Go Home </Link>
           </h5>
         </div>
@@ -23,7 +23,7 @@ const NotFound = () => {
           <img src={PageNotFound} className="center" />
           <h5 className="text-light texti" style={{ textAlign: "center" }}>
             The thing you seek is not here...<br></br>
-            This is also known as a "500".<br></br>
+            This is also known as a "404".<br></br>
             <Link to="/">Go Home </Link>
           </h5>
         </div>

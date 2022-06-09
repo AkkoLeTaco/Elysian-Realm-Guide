@@ -14,7 +14,7 @@ export const Details = () => {
           <div className="row featurette bg-dark">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
-                <span className="text-white">
+                <span className="display-6 text-white">
                   {store.characterDescription.character.description}
                 </span>
               </h2>
@@ -40,7 +40,7 @@ export const Details = () => {
                   {store.characterDescription.character.best_weapon}
                 </span>
               </h2>
-              <h2 className="lead text-white">
+              <h2 className="display-6 text-white">
                 {store.characterDescription.weapon.weapon_description}
               </h2>
             </div>
@@ -65,9 +65,9 @@ export const Details = () => {
                   {store.characterDescription.character.best_signets}
                 </span>
               </h2>
-              <p className="lead text-white">
+              <h3 className="display-6 text-white">
                 {store.characterDescription.signet.signet_description},
-              </p>
+              </h3>
             </div>
             <div className="col-md-5">
               <img
