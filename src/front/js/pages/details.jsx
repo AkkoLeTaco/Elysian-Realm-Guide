@@ -66,7 +66,7 @@ export const Details = () => {
                 </span>
               </h2>
               <h3 className="display-6 text-white">
-                {store.characterDescription.signet.signet_description},
+                {store.characterDescription.signet.signet_description}
               </h3>
             </div>
             <div className="col-md-5">
